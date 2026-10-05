@@ -24,12 +24,11 @@ Because the model scores hypotheses instead of fixed classes, it can also answer
 
 ## Run on Colab
 
-1. Open the notebook with the link above. If the repository is private, Colab asks for GitHub access first.
+1. Open the notebook with the link above.
 2. *Runtime → Change runtime type → T4 GPU*.
-3. Upload the `data` folder to Google Drive as `MyDrive/my_jev/data/`.
-4. *Run all*, and allow Drive access when asked.
+3. *Run all*. The notebook clones this repo to get `data/`.
 
-The notebook writes `predictions.csv` and `qwen_jev_pairs_weights.pt` (the trained layers and head, about 0.45 GB) next to the data on Drive. Git ignores both.
+The notebook writes `predictions.csv` and `qwen_jev_pairs_weights.pt` (the trained layers and head, about 0.45 GB) into the repo folder. Git ignores both. On Colab they disappear when the session ends, so download them if you need them.
 
 To change the classes, edit `classes` in the settings cell. Labels in the data must match its keys.
 
